@@ -21,10 +21,7 @@ int i;
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		Intent intent  = new Intent();
-		intent.setClass(this, MyIntentService.class);
-		startService(intent);
-		Log.e("wxp", "startService");
+
 	}
 
 	@Override
@@ -34,45 +31,7 @@ int i;
 		return true;
 	}
 
-	public  class MyIntentService extends IntentService {
-		
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
-		public MyIntentService() {
-			super("MyIntentService");
-
-		}
-
-
-		@Override
-		protected void onHandleIntent(Intent intent) {
-			Log.e("wxp", "onHandleIntent");
-			
-		}
-	}
 	
-	class MyService extends Service{
-
-		@Override
-		public void onCreate() {
-			// TODO Auto-generated method stub
-			super.onCreate();
-			Log.e("wxp", "onCreate");
-		}
-		@Override
-		@Deprecated
-		public void onStart(Intent intent, int startId) {
-			// TODO Auto-generated method stub
-			super.onStart(intent, startId);
-			Log.e("wxp", "onStart");
-		}
-		
-		@Override
-		public IBinder onBind(Intent intent) {
-			// TODO Auto-generated method stub
-			return null;
-		}
-		
-	}
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// Handle action bar item clicks here. The action bar will
